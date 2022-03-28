@@ -11,4 +11,11 @@ public class FizzBuzzTest {
         assertEquals(1, fizzbuzz.next());
     }
 
+    @Test
+    void shouldCountIndefinitely() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals(1, fizzbuzz.next());
+        assertEquals(2, fizzbuzz.next());
+    }
+
 }
