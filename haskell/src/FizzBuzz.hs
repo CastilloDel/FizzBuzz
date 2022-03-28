@@ -1,13 +1,17 @@
 module FizzBuzz where
 
 fizzBuzz :: Int -> String
-fizzBuzz n = addDefault $ fizz ++ buzz
+fizzBuzz n = addDefault $ fizz n ++ buzz n
   where
-    fizz
-      | n `mod` 3 == 0 = "Fizz"
-      | otherwise = ""
-    buzz
-      | n `mod` 5 == 0 = "Buzz"
-      | otherwise = ""
     addDefault "" = show n
     addDefault s = s
+
+fizz :: Int -> String
+fizz n
+  | n `mod` 3 == 0 = "Fizz"
+  | otherwise = ""
+
+buzz :: Int -> String
+buzz n
+  | n `mod` 5 == 0 = "Buzz"
+  | otherwise = ""
