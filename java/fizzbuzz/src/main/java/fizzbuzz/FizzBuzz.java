@@ -9,11 +9,13 @@ public class FizzBuzz {
 
     public String next() {
         count++;
-        if (count == 3) {
-            return "Fizz";
-        } else if (count == 5) {
-            return "Buzz";
+        switch (count) {
+            case 3:
+                return "Fizz";
+            case 5:
+                return "Buzz";
+            default:
+                return String.valueOf(count);
         }
-        return String.valueOf(count);
     }
 }
