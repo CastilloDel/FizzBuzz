@@ -26,32 +26,30 @@ public class FizzBuzzTest {
 
     @Test
     void shouldReturnFizzIfMultipleOf3() {
-        fizzbuzz.next();
-        fizzbuzz.next();
+        skip(2);
         assertEquals("Fizz", fizzbuzz.next());
-        fizzbuzz.next();
-        fizzbuzz.next();
+        skip(2);
         assertEquals("Fizz", fizzbuzz.next());
     }
 
     @Test
     void shouldReturnBuzzIfMultipleOf5() {
-        for (int i = 0; i < 4; i++) {
-            fizzbuzz.next();
-        }
+        skip(4);
         assertEquals("Buzz", fizzbuzz.next());
-        for (int i = 0; i < 4; i++) {
-            fizzbuzz.next();
-        }
+        skip(4);
         assertEquals("Buzz", fizzbuzz.next());
     }
 
     @Test
     void shouldReturnFizzBuzzIfMultipleOf3And5() {
-        for (int i = 0; i < 14; i++) {
+        skip(14);
+        assertEquals("FizzBuzz", fizzbuzz.next());
+    }
+
+    void skip(int toSkip) {
+        for (int i = 0; i < toSkip; i++) {
             fizzbuzz.next();
         }
-        assertEquals("FizzBuzz", fizzbuzz.next());
     }
 
 }
