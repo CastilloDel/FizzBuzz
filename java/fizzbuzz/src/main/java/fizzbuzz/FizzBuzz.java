@@ -10,12 +10,20 @@ public class FizzBuzz {
     public String next() {
         count++;
         String result = "";
-        if (count % 3 == 0) {
+        if (isFizzNumber()) {
             result += "Fizz";
         }
-        if (count % 5 == 0) {
+        if (isBuzzNumber()) {
             result += "Buzz";
         }
         return result.isEmpty() ? String.valueOf(count) : result;
+    }
+
+    public boolean isFizzNumber() {
+        return count % 3 == 0;
+    }
+
+    public boolean isBuzzNumber() {
+        return count % 5 == 0;
     }
 }
