@@ -9,6 +9,10 @@ public class FizzBuzz {
 
     public String next() {
         count++;
+        return calculateString();
+    }
+
+    private String calculateString() {
         String result = "";
         if (isFizzNumber()) {
             result += "Fizz";
@@ -19,11 +23,11 @@ public class FizzBuzz {
         return result.isEmpty() ? String.valueOf(count) : result;
     }
 
-    public boolean isFizzNumber() {
+    private boolean isFizzNumber() {
         return count % 3 == 0;
     }
 
-    public boolean isBuzzNumber() {
+    private boolean isBuzzNumber() {
         return count % 5 == 0;
     }
 }
