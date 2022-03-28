@@ -42,4 +42,13 @@ public class FizzBuzzTest {
         assertEquals("Buzz", fizzbuzz.next());
     }
 
+    @Test
+    void shouldReturnFizzBuzzIfMultipleOf3And5() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        for (int i = 0; i < 14; i++) {
+            fizzbuzz.next();
+        }
+        assertEquals("FizzBuzz", fizzbuzz.next());
+    }
+
 }
