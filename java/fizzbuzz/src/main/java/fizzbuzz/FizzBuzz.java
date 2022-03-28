@@ -7,8 +7,11 @@ public class FizzBuzz {
         count = 0;
     }
 
-    public int next() {
+    public String next() {
         count++;
-        return count;
+        if (count == 3) {
+            return "Fizz";
+        }
+        return String.valueOf(count);
     }
 }
