@@ -11,6 +11,8 @@ public class FizzBuzz {
         count++;
         if (count == 3) {
             return "Fizz";
+        } else if (count == 5) {
+            return "Buzz";
         }
         return String.valueOf(count);
     }

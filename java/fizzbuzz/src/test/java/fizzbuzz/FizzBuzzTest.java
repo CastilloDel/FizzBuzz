@@ -26,4 +26,13 @@ public class FizzBuzzTest {
         assertEquals("Fizz", fizzbuzz.next());
     }
 
+    @Test
+    void shouldReturnBuzzIfMultipleOf5() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        for (int i = 0; i < 4; i++) {
+            fizzbuzz.next();
+        }
+        assertEquals("Buzz", fizzbuzz.next());
+    }
+
 }
