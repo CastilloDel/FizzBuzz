@@ -3,5 +3,5 @@
 FizzBuzz::FizzBuzz() {}
 
 string FizzBuzz::get(int number) {
-    return "4";
+    return to_string(number);
 }
