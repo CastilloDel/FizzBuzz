@@ -13,3 +13,7 @@ The Haskell implementation is a stateless function (functional programming yay!)
 ### C++
 
 The C++ implementation is a stateless class that exposes a method that can be called with anumber to get the "fizzbuzz" equivalent string. In this implementation the condition for adding "Fizz" and "Buzz" has been extracted to two virtual functions. This allows possible childs classes to behave correctly when using runtime polymorphism.
+
+### Python
+
+The Python implementation works just like the C++ one, but it uses a curious method (but obviously not optimal) to check if a number is multiple of 3 or 5.
