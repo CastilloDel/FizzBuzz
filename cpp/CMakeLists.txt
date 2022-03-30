@@ -26,10 +26,21 @@ add_executable(
   headers/fizzbuzz.hpp
 )
 
+add_executable(
+  fizzbuzz_main
+  src/main.cpp
+  headers/fizzbuzz.hpp
+)
+
 target_link_libraries(
   fizzbuzz_test
   fizzbuzz
   gtest_main
+)
+
+target_link_libraries(
+  fizzbuzz_main
+  fizzbuzz
 )
 
 include(GoogleTest)
