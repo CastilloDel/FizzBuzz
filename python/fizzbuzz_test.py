@@ -12,6 +12,7 @@ class FizzBuzzTests(unittest.TestCase):
     fizzbuzz = FizzBuzz()
     self.assertEqual(fizzbuzz.to_fizzbuzz(3), 'Fizz')
     self.assertEqual(fizzbuzz.to_fizzbuzz(18), 'Fizz')
-   
+    self.assertEqual(fizzbuzz.to_fizzbuzz(363), 'Fizz')
+
 
 unittest.main()

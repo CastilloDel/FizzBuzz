@@ -1,11 +1,20 @@
 class FizzBuzz():
   def to_fizzbuzz(self, number: int):
-    copy = number
-    digit_sum = 0
-    while copy > 0:
-      digit_sum += copy % 10
-      copy //= 10
-    if digit_sum in [3, 6, 9]:
+    if self.is_fizz(number):
       return 'Fizz'
     return str(number)
     
+  def is_fizz(self, number: int):
+    return self.get_recursive_digit_sum(number) in [3, 6, 9]
+    
+  def get_recursive_digit_sum(self, number):
+    return (number if number < 10
+      else self.get_recursive_digit_sum(self.get_digit_sum(number))
+    )
+
+  def get_digit_sum(self, number: int):
+    digit_sum = 0
+    while number > 0:
+      digit_sum += number % 10
+      number //= 10
+    return digit_sum
