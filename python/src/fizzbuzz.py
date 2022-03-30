@@ -2,6 +2,8 @@ class FizzBuzz():
   def to_fizzbuzz(self, number: int):
     if self.is_fizz(number):
       return 'Fizz'
+    if self.is_buzz(number):
+      return 'Buzz'
     return str(number)
     
   def is_fizz(self, number: int):
@@ -18,3 +20,6 @@ class FizzBuzz():
       digit_sum += number % 10
       number //= 10
     return digit_sum
+
+  def is_buzz(self, number: int):
+    return number % 10 in [0, 5]
