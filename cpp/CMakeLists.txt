@@ -17,13 +17,13 @@ enable_testing()
 add_library(
   fizzbuzz
   src/fizzbuzz.cpp
-  src/fizzbuzz.hpp
+  headers/fizzbuzz.hpp
 )
 
 add_executable(
   fizzbuzz_test
   test/fizzbuzz_test.cpp
-  src/fizzbuzz.hpp
+  headers/fizzbuzz.hpp
 )
 
 target_link_libraries(

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/fizzbuzz.hpp"
+#include "../headers/fizzbuzz.hpp"
 
 TEST(FizzBuzz, ReturnsExpectedNumber) {
   FizzBuzz fizzbuzz;

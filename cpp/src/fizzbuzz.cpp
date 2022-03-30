@@ -1,4 +1,4 @@
-#include "fizzbuzz.hpp"
+#include "../headers/fizzbuzz.hpp"
 
 FizzBuzz::FizzBuzz() {}
 
