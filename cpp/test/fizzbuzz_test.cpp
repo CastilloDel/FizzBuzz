@@ -18,3 +18,9 @@ TEST(FizzBuzz, ReturnsBuzzIfNumberIsMultipleOf5) {
   EXPECT_EQ(fizzbuzz.get(5), "Buzz");
   EXPECT_EQ(fizzbuzz.get(20), "Buzz");
 }
+
+TEST(FizzBuzz, ReturnsFizzBuzzIfNumberIsMultipleOf3And5) {
+  FizzBuzz fizzbuzz;
+  EXPECT_EQ(fizzbuzz.get(15), "FizzBuzz");
+  EXPECT_EQ(fizzbuzz.get(60), "FizzBuzz");
+}

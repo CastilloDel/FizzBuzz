@@ -3,13 +3,14 @@
 FizzBuzz::FizzBuzz() {}
 
 string FizzBuzz::get(int number) {
+    string result;
     if (isFizz(number)) {
-        return "Fizz";
+        result += "Fizz";
     }
     if (isBuzz(number)) {
-        return "Buzz";
+        result += "Buzz";
     }
-    return to_string(number);
+    return result.empty() ? to_string(number) : result;
 }
 
 bool FizzBuzz::isFizz(int number) {
