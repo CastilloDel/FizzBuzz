@@ -14,14 +14,23 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(
-  hello_test
-  test/hello_test.cpp
+add_library(
+  fizzbuzz
+  src/fizzbuzz.cpp
+  src/fizzbuzz.hpp
 )
+
+add_executable(
+  fizzbuzz_test
+  test/fizzbuzz_test.cpp
+  src/fizzbuzz.hpp
+)
+
 target_link_libraries(
-  hello_test
+  fizzbuzz_test
+  fizzbuzz
   gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(hello_test)
+gtest_discover_tests(fizzbuzz_test)
