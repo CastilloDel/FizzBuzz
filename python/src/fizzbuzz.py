@@ -1,10 +1,11 @@
 class FizzBuzz():
   def to_fizzbuzz(self, number: int):
+    result = ''
     if self.is_fizz(number):
-      return 'Fizz'
+      result += 'Fizz'
     if self.is_buzz(number):
-      return 'Buzz'
-    return str(number)
+      result += 'Buzz'
+    return str(number) if result == '' else result
     
   def is_fizz(self, number: int):
     return self.get_recursive_digit_sum(number) in [3, 6, 9]

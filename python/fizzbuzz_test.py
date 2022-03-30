@@ -20,5 +20,9 @@ class FizzBuzzTests(unittest.TestCase):
     self.assertEqual(fizzbuzz.to_fizzbuzz(20), 'Buzz')
     self.assertEqual(fizzbuzz.to_fizzbuzz(425), 'Buzz')
    
+  def test_returns_fizzbuzz_if_multiple_of_3_and_5(self):
+    fizzbuzz = FizzBuzz()
+    self.assertEqual(fizzbuzz.to_fizzbuzz(15), 'FizzBuzz')
+    self.assertEqual(fizzbuzz.to_fizzbuzz(720), 'FizzBuzz')
 
 unittest.main()
