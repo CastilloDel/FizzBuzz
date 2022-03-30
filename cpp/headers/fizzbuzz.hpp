@@ -13,4 +13,6 @@ class FizzBuzz {
   protected:
     virtual bool isFizz(int number);
     virtual bool isBuzz(int number);
+    void addFizz(int number, string& result);
+    void addBuzz(int number, string& result);
 };
