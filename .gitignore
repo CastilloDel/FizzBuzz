@@ -2,3 +2,4 @@ target/
 .vscode
 dist-newstyle/
 build
+__pycache__
