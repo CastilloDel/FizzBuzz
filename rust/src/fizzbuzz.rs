@@ -1,16 +1,24 @@
-fn get_fizzbuzz_equivalent(number: usize) -> String {
+pub fn get_fizzbuzz_equivalent(number: usize) -> String {
     let mut result = String::new();
-    if number % 3 == 0 {
-        result.push_str("Fizz");
+    result = add_buzz(number, add_fizz(number, result));
+    match result.is_empty() {
+        true => number.to_string(),
+        false => result,
     }
-    if number % 5 == 0 {
-        result.push_str("Buzz");
+}
+
+fn add_fizz(number: usize, string: String) -> String {
+    match number % 3 == 0 {
+        true => string + "Fizz",
+        false => string,
     }
-    if result.is_empty() {
-        return number.to_string();
-    } else {
-        return result;
-    };
+}
+
+fn add_buzz(number: usize, string: String) -> String {
+    match number % 5 == 0 {
+        true => string + "Buzz",
+        false => string,
+    }
 }
 
 #[cfg(test)]
