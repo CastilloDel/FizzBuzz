@@ -1,11 +1,16 @@
 fn get_fizzbuzz_equivalent(number: usize) -> String {
+    let mut result = String::new();
     if number % 3 == 0 {
-        "Fizz".to_string()
-    } else if number % 5 == 0 {
-        "Buzz".to_string()
-    } else {
-        number.to_string()
+        result.push_str("Fizz");
     }
+    if number % 5 == 0 {
+        result.push_str("Buzz");
+    }
+    if result.is_empty() {
+        return number.to_string();
+    } else {
+        return result;
+    };
 }
 
 #[cfg(test)]
@@ -27,5 +32,11 @@ mod tests {
     fn should_return_buzz_if_multiple_of_5() {
         assert_eq!(get_fizzbuzz_equivalent(5), "Buzz");
         assert_eq!(get_fizzbuzz_equivalent(95), "Buzz");
+    }
+
+    #[test]
+    fn should_return_fizzbuzz_if_multiple_of_3_and_5() {
+        assert_eq!(get_fizzbuzz_equivalent(15), "FizzBuzz");
+        assert_eq!(get_fizzbuzz_equivalent(90), "FizzBuzz");
     }
 }
