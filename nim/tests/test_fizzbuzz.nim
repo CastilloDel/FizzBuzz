@@ -8,3 +8,6 @@ static: (fizzbuzz(3) == "Fizz" and fizzbuzz(99) == "Fizz")
 
 static: (fizzbuzz(5) == "Buzz" and fizzbuzz(100) == "Buzz")
     .assert "Returns Buzz if number is a multiple of 5"
+
+static: (fizzbuzz(15) == "FizzBuzz" and fizzbuzz(330) == "FizzBuzz")
+    .assert "Returns FizzBuzz if number is a multiple of 3 and 5"
