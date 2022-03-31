@@ -21,3 +21,7 @@ The Python implementation works just like the C++ one, but it uses a curious met
 ### Rust
 
 The Rust version is really similar to the Haskell one. One difference is that tests are placed in the same file as the fizzbuzz function, because this is what is considered idiomatic in Rust.
+
+### Nim
+
+The Nim version is a really simple function. It is unique in the sense that it can run at compile time. In fact the tests are also executed at compile time.
