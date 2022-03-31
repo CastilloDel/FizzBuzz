@@ -1,3 +1,3 @@
 
-proc fizzbuzz*(number: int): int =
-  number
+proc fizzbuzz*(number: int): string =
+  $number
