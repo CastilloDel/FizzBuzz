@@ -1,5 +1,6 @@
 mod fizzbuzz;
+use fizzbuzz::get_fizzbuzz_equivalent;
 
 fn main() {
-    println!("Hello, world!");
+    (0..=100).for_each(|n| println!("{}", get_fizzbuzz_equivalent(n)))
 }
