@@ -17,3 +17,7 @@ The C++ implementation is a stateless class that exposes a method that can be ca
 ### Python
 
 The Python implementation works just like the C++ one, but it uses a curious method (but obviously not optimal) to check if a number is multiple of 3 or 5.
+
+### Rust
+
+The Rust version is really similar to the Haskell one. One difference is that tests are placed in the same file as the fizzbuzz function, because this is what is considered idiomatic in Rust.
