@@ -9,7 +9,7 @@ type DoubleCondition struct {
 	b2 bool
 }
 
-func (fizzbuzz *FizzBuzz) get(number int) string {
+func (fizzbuzz *FizzBuzz) Get(number int) string {
 	conditions := DoubleCondition{number%3 == 0, number%5 == 0}
 	switch conditions {
 	case DoubleCondition{true, true}:
