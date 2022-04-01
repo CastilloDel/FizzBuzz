@@ -37,4 +37,16 @@ func TestFizzBuzz(t *testing.T) {
 			t.Errorf("Actual: %s | Expected %s", actual, "Buzz")
 		}
 	})
+
+	t.Run("should return FizzBuzz if number is divisible by 3 and 5", func(T *testing.T) {
+		actual := fizzbuzz.get(15)
+		expected := "FizzBuzz"
+		if actual != expected {
+			t.Errorf("Actual: %s | Expected %s", actual, expected)
+		}
+		actual = fizzbuzz.get(555)
+		if actual != expected {
+			t.Errorf("Actual: %s | Expected %s", actual, expected)
+		}
+	})
 }
