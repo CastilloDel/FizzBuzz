@@ -1,7 +1,9 @@
 package fizzbuzz
 
+import "strconv"
+
 type FizzBuzz struct{}
 
 func (fizzbuzz *FizzBuzz) get(number int) string {
-	return "1"
+	return strconv.Itoa(number)
 }
