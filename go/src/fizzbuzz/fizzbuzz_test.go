@@ -10,9 +10,20 @@ func TestFizzBuzz(t *testing.T) {
 		if actual != "1" {
 			t.Errorf("Actual: %s | Expected %s", actual, "1")
 		}
-		actual = fizzbuzz.get(126)
-		if actual != "126" {
-			t.Errorf("Actual: %s | Expected %s", actual, "126")
+		actual = fizzbuzz.get(127)
+		if actual != "127" {
+			t.Errorf("Actual: %s | Expected %s", actual, "127")
+		}
+	})
+
+	t.Run("should return Fizz if number is divisible by 3", func(T *testing.T) {
+		actual := fizzbuzz.get(3)
+		if actual != "Fizz" {
+			t.Errorf("Actual: %s | Expected %s", actual, "Fizz")
+		}
+		actual = fizzbuzz.get(333)
+		if actual != "Fizz" {
+			t.Errorf("Actual: %s | Expected %s", actual, "Fizz")
 		}
 	})
 }
