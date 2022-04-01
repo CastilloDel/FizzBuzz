@@ -3,9 +3,13 @@ package fizzbuzz
 import "testing"
 
 func TestFizzBuzz(t *testing.T) {
-	got := FizzBuzz{}
-
-	if true {
-		t.Errorf("Hello %q", got)
+	fizzbuzz := FizzBuzz{}
+	expected := "1"
+	actual := fizzbuzz.get(1)
+	if expected != actual {
+		t.Errorf(
+			"Doesn't returns the same number as string: %s doesn't match %s",
+			actual, expected,
+		)
 	}
 }
