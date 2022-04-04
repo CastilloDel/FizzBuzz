@@ -35,4 +35,12 @@ describe("Fizzbuzz", () => {
     expect(skip(iterator, 3).value).toBe("Fizz");
     expect(skip(iterator, 3 * 19).value).toBe("Fizz");
   });
+
+  test("Should return Buzz when it is a multiple of 5", () => {
+    const iterator = getFizzBuzzIterator(limit);
+
+    expect(skip(iterator, 5).value).toBe("Buzz");
+    expect(skip(iterator, 5).value).toBe("Buzz");
+    expect(skip(iterator, 5 * 11).value).toBe("Buzz");
+  });
 });
