@@ -3,6 +3,6 @@
 module Fizzbuzz
   VERSION=2
   def Fizzbuzz.get(number)
-    1
+    number.to_s()
   end
 end
