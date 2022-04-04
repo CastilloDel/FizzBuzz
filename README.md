@@ -33,3 +33,7 @@ The Go version is also rather simple. I tried to use a helper struct to perform 
 ### Ruby
 
 A simple implementation using Rspec and Rake.
+
+### TypeScript
+
+The TS implementation uses a generator, which makes it different from the other ones. This one was developed with José Daniel Escánez Expósito.
