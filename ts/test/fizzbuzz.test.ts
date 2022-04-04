@@ -1,6 +1,8 @@
 import { getFizzBuzzIterator } from "../src/fizzbuzz";
 
 describe("Fizzbuzz", () => {
+  const limit = 90;
+
   test("Should count", () => {
     const iterator = getFizzBuzzIterator();
 
@@ -9,7 +11,6 @@ describe("Fizzbuzz", () => {
   });
 
   test("Should be possible to set an end for the iterator", () => {
-    const limit = 23;
     const iterator = getFizzBuzzIterator(limit);
 
     let count = 0;
@@ -20,13 +21,18 @@ describe("Fizzbuzz", () => {
     expect(count).toBe(limit);
   });
 
-  test("Should return Fizz when it is a multiple of 3", () => {
-    const limit = 90;
-    const iterator = getFizzBuzzIterator(limit);
-    for (let i = 0; i < limit / 3; i++) {
+  const skip = (iterator: Generator, number: number) => {
+    for (let i = 0; i < number - 1; i++) {
       iterator.next();
-      iterator.next();
-      expect(iterator.next().value).toBe("Fizz");
     }
+    return iterator.next();
+  };
+
+  test("Should return Fizz when it is a multiple of 3", () => {
+    const iterator = getFizzBuzzIterator(limit);
+
+    expect(skip(iterator, 3).value).toBe("Fizz");
+    expect(skip(iterator, 3).value).toBe("Fizz");
+    expect(skip(iterator, 3 * 19).value).toBe("Fizz");
   });
 });
