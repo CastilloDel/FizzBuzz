@@ -29,3 +29,7 @@ The Nim version is a really simple function. It is unique in the sense that it c
 ### Go
 
 The Go version is also rather simple. I tried to use a helper struct to perform a different solution. This could have been a tuple, but Go doesn't have support for tuples. The tests in this version are placed with the files they test, because that seems to be the convention in go
+
+### Ruby
+
+A simple implementation using Rspec and Rake.
