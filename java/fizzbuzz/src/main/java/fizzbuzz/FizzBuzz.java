@@ -9,25 +9,25 @@ public class FizzBuzz {
 
     public String next() {
         count++;
-        return calculateString();
+        return processResult();
     }
 
-    private String calculateString() {
+    private String processResult() {
         String result = "";
-        if (isFizzNumber(count)) {
+        if (isFizz(count)) {
             result += "Fizz";
         }
-        if (isBuzzNumber(count)) {
+        if (isBuzz(count)) {
             result += "Buzz";
         }
         return result.isEmpty() ? String.valueOf(count) : result;
     }
 
-    private boolean isFizzNumber(int count) {
+    private boolean isFizz(int count) {
         return count % 3 == 0;
     }
 
-    private boolean isBuzzNumber(int count) {
+    private boolean isBuzz(int count) {
         return count % 5 == 0;
     }
 }
