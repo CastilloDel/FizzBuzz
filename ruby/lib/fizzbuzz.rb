@@ -3,12 +3,23 @@
 module Fizzbuzz
   VERSION=2
   def Fizzbuzz.get(number)
-    if number % 3 == 0
+    fizz = isFizz(number)
+    buzz = isBuzz(number)
+    if fizz and buzz
+      return "FizzBuzz"
+    elsif fizz
       return "Fizz"
-    end
-    if number % 5 == 0
+    elsif buzz
       return "Buzz"
     end
     number.to_s()
+  end
+
+  def Fizzbuzz.isFizz(number)
+    number % 3 == 0
+  end
+
+  def Fizzbuzz.isBuzz(number)
+    number % 5 == 0
   end
 end
