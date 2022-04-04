@@ -6,4 +6,9 @@ RSpec.describe Fizzbuzz do
     expect(Fizzbuzz.get(1)).to eq("1")
     expect(Fizzbuzz.get(13)).to eq("13")
   end
+
+  it "returns Fizz if number is multiple of 3" do
+    expect(Fizzbuzz.get(3)).to eq("Fizz")
+    expect(Fizzbuzz.get(66)).to eq("Fizz")
+  end
 end
