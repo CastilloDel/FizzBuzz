@@ -11,4 +11,9 @@ RSpec.describe Fizzbuzz do
     expect(Fizzbuzz.get(3)).to eq("Fizz")
     expect(Fizzbuzz.get(66)).to eq("Fizz")
   end
+
+  it "returns Buzz if number is multiple of 5" do
+    expect(Fizzbuzz.get(5)).to eq("Buzz")
+    expect(Fizzbuzz.get(50)).to eq("Buzz")
+  end
 end
