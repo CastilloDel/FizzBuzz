@@ -19,4 +19,14 @@ describe("Fizzbuzz", () => {
 
     expect(count).toBe(limit);
   });
+
+  test("Should return Fizz when it is a multiple of 3", () => {
+    const limit = 90;
+    const iterator = getFizzBuzzIterator(limit);
+    for (let i = 0; i < limit / 3; i++) {
+      iterator.next();
+      iterator.next();
+      expect(iterator.next().value).toBe("Fizz");
+    }
+  });
 });
