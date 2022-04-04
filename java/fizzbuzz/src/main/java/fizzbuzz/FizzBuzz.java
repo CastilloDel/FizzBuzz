@@ -14,20 +14,20 @@ public class FizzBuzz {
 
     private String calculateString() {
         String result = "";
-        if (isFizzNumber()) {
+        if (isFizzNumber(count)) {
             result += "Fizz";
         }
-        if (isBuzzNumber()) {
+        if (isBuzzNumber(count)) {
             result += "Buzz";
         }
         return result.isEmpty() ? String.valueOf(count) : result;
     }
 
-    private boolean isFizzNumber() {
+    private boolean isFizzNumber(int count) {
         return count % 3 == 0;
     }
 
-    private boolean isBuzzNumber() {
+    private boolean isBuzzNumber(int count) {
         return count % 5 == 0;
     }
 }
