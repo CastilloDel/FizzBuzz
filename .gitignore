@@ -5,3 +5,5 @@ build
 __pycache__
 nimcache
 testresults
+zig-cache
+zig-out
