@@ -1,7 +1,8 @@
 const std = @import("std");
+const fizzbuzz = @import("fizzbuzz.zig");
 
 pub fn main() anyerror!void {
-    std.log.info("All your codebase are belong to us.", .{});
+    std.debug.print("{s}", .{fizzbuzz.get_fizzbuzz(1)});
 }
 
 test "basic test" {
