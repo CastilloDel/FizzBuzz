@@ -1,6 +1,6 @@
 #include "../headers/fizzbuzz.hpp"
 
-FizzBuzz::FizzBuzz() {}
+FizzBuzz::~FizzBuzz() {}
 
 string FizzBuzz::get(int number) {
     string result;

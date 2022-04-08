@@ -7,7 +7,7 @@ using std::to_string;
 
 class FizzBuzz {
   public:
-    FizzBuzz(); 
+    virtual ~FizzBuzz();
     string get(int number);
 
   protected:
