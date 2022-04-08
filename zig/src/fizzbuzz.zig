@@ -9,6 +9,5 @@ pub fn get_fizzbuzz(n: usize) ![]u8 {
 const testing = std.testing;
 
 test "Should return the passed number in a string" {
-    const actual: []const u8 = try get_fizzbuzz(1);
-    try testing.expectEqual(actual[0], "1"[0]);
+    try testing.expect(std.mem.eql(u8, try get_fizzbuzz(1), "1"));
 }
