@@ -10,4 +10,5 @@ const testing = std.testing;
 
 test "Should return the passed number in a string" {
     try testing.expect(std.mem.eql(u8, try get_fizzbuzz(1), "1"));
+    try testing.expect(std.mem.eql(u8, try get_fizzbuzz(17), "17"));
 }
