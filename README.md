@@ -37,3 +37,7 @@ A simple implementation using Rspec and Rake.
 ### TypeScript
 
 The TS implementation uses a generator, which makes it different from the other ones. This one was developed with José Daniel Escánez Expósito.
+
+### Zig
+
+The Zig implementation is also a fairly simple implementation, but can be executed at compile time.
