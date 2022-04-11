@@ -1,6 +1,4 @@
 const std = @import("std");
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-const allocator = gpa.allocator();
 
 pub fn get_fizzbuzz(comptime n: usize) []const u8 {
     if (n % 15 == 0) {
